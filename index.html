@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Flow Statement Glossary - FINAN I Unit 6</title>
+    <style>
+        @media print {
+            body {
+                max-width: 100%;
+                margin: 0.4in 0.5in;
+            }
+
+            .glossary {
+                column-count: 2;
+                column-gap: 40px;
+                column-rule: 1px solid #e5e7eb;
+            }
+
+            .ai-prompt, .bank-explainer, .advanced-section, .profit-vs-cash {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media screen {
+            .glossary {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px 45px;
+            }
+
+            .term.full-width {
+                grid-column: 1 / -1;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 8px 16px;
+            z-index: 1000;
+            font-size: 0.95em;
+            text-decoration: underline;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        :focus-visible {
+            outline: 2px solid #1a1a1a;
+            outline-offset: 2px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.65;
+            color: #2c3e50;
+            background: #f7faf9;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 50px 45px 60px 45px;
+        }
+
+        header {
+            margin-bottom: 45px;
+            padding-bottom: 25px;
+            border-bottom: 3px solid #16a34a;
+        }
+
+        h1 {
+            font-size: 2.6em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #57534e;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .intro {
+            background: #ffffff;
+            padding: 28px 30px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            border-left: 4px solid #16a34a;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro strong {
+            color: #16a34a;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.65em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 45px;
+            margin-bottom: 22px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .structure-section {
+            margin-bottom: 45px;
+        }
+
+        .structure-diagram {
+            background: #ffffff;
+            padding: 30px 35px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            line-height: 2.4;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .structure-line {
+            display: flex;
+            align-items: baseline;
+            padding: 3px 0;
+        }
+
+        .structure-diagram .operator {
+            color: #15803d;
+            font-weight: 700;
+            font-size: 1em;
+            display: inline-block;
+            min-width: 60px;
+            flex-shrink: 0;
+        }
+
+        .structure-diagram .activity {
+            color: #166534;
+            font-weight: 600;
+        }
+
+        .structure-diagram .total {
+            color: #15803d;
+            font-weight: 700;
+        }
+
+        .structure-diagram .note {
+            color: #57534e;
+            font-size: 0.88em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-style: italic;
+            margin-left: 8px;
+        }
+
+        .profit-vs-cash {
+            background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 100%);
+            border: 2px solid #eab308;
+            border-radius: 6px;
+            padding: 28px 32px;
+            margin: 40px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .profit-vs-cash h3 {
+            font-size: 1.35em;
+            color: #1a1a1a;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .profit-vs-cash p {
+            color: #2c3e50;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 0.98em;
+        }
+
+        .profit-vs-cash .examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .profit-vs-cash .example-box {
+            background: #ffffff;
+            padding: 18px 20px;
+            border-radius: 4px;
+            border-left: 3px solid #eab308;
+        }
+
+        .profit-vs-cash .example-title {
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .profit-vs-cash .example-detail {
+            font-size: 0.9em;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .profit-vs-cash .example-detail:last-child {
+            margin-bottom: 0;
+        }
+
+        .profit-vs-cash blockquote {
+            margin-top: 20px;
+            padding: 15px 20px;
+            background: #ffffff;
+            border-left: 3px solid #15803d;
+            font-style: italic;
+            color: #1e293b;
+            font-size: 0.95em;
+            border-radius: 4px;
+        }
+
+        .ai-prompt {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #22c55e;
+            border-radius: 6px;
+            padding: 18px 22px;
+            margin: 35px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .ai-prompt .label {
+            font-size: 0.85em;
+            font-weight: 700;
+            color: #15803d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .ai-prompt .prompt-text {
+            font-size: 1.02em;
+            color: #2c3e50;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .ai-prompt .prompt-text:before {
+            content: '\201C';
+            color: #15803d;
+            font-size: 1.3em;
+            margin-right: 4px;
+        }
+
+        .ai-prompt .prompt-text:after {
+            content: '\201D';
+            color: #15803d;
+            font-size: 1.3em;
+            margin-left: 4px;
+        }
+
+        .bank-explainer {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #3b82f6;
+            border-radius: 6px;
+            padding: 28px 32px;
+            margin: 40px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .bank-explainer h3 {
+            font-size: 1.3em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .bank-explainer p {
+            color: #2c3e50;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 0.98em;
+        }
+
+        .bank-explainer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bank-explainer strong {
+            color: #1a1a1a;
+        }
+
+        .bank-explainer .money-flow {
+            background: #ffffff;
+            padding: 20px 22px;
+            border-radius: 4px;
+            margin: 18px 0;
+            border-left: 3px solid #3b82f6;
+            font-family: 'Courier New', monospace;
+            font-size: 0.92em;
+            line-height: 1.8;
+        }
+
+        .bank-explainer .money-flow div {
+            margin-bottom: 6px;
+        }
+
+        .bank-explainer .money-flow div:last-child {
+            margin-bottom: 0;
+        }
+
+        .bank-explainer .key-point {
+            background: #fef3c7;
+            padding: 15px 18px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 3px solid #f59e0b;
+            font-size: 0.95em;
+        }
+
+        .advanced-section {
+            background: #fafafa;
+            border: 2px dashed #9ca3af;
+            border-radius: 6px;
+            padding: 32px 36px;
+            margin: 50px 0 40px 0;
+        }
+
+        .advanced-section .header {
+            margin-bottom: 20px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .advanced-section .tag {
+            display: inline-block;
+            background: #b45309;
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .advanced-section h3 {
+            font-size: 1.4em;
+            color: #1f2937;
+            margin: 0 0 12px 0;
+        }
+
+        .advanced-section .audience {
+            font-size: 0.93em;
+            color: #57534e;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .advanced-section .audience strong {
+            color: #1f2937;
+        }
+
+        .advanced-section p {
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-size: 0.98em;
+        }
+
+        .advanced-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .advanced-section strong {
+            color: #1f2937;
+        }
+
+        .advanced-section .concept-box {
+            background: #ffffff;
+            padding: 18px 20px;
+            border-radius: 4px;
+            margin: 18px 0;
+            border-left: 3px solid #6b7280;
+        }
+
+        .advanced-section .concept-title {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .advanced-section .concept-detail {
+            font-size: 0.92em;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .advanced-section .example {
+            background: #f0fdf4;
+            padding: 16px 18px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 3px solid #22c55e;
+            font-size: 0.92em;
+            color: #166534;
+        }
+
+        .section-intro {
+            font-style: italic;
+            color: #57534e;
+            margin-bottom: 22px;
+            font-size: 0.98em;
+        }
+
+        .term {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 25px;
+        }
+
+        .term dt {
+            font-weight: 700;
+            font-size: 1.12em;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .term dd {
+            color: #4a4a4a;
+            line-height: 1.65;
+            font-size: 0.98em;
+        }
+
+        .term .example {
+            margin-top: 11px;
+            padding: 12px 16px;
+            background: #ffffff;
+            border-radius: 4px;
+            font-size: 0.92em;
+            color: #475569;
+            font-style: italic;
+            border-left: 3px solid #22c55e;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .term .formula {
+            margin-top: 11px;
+            padding: 11px 16px;
+            background: #f0fdf4;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.92em;
+            color: #166534;
+            border-left: 3px solid #22c55e;
+        }
+
+        .term .note {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: #f8fafc;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #475569;
+            font-style: italic;
+            border-left: 2px solid #cbd5e1;
+        }
+
+        footer.resources {
+            background: #ffffff;
+            padding: 30px 35px;
+            border-radius: 6px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        footer.resources h2 {
+            margin-top: 0;
+            font-size: 1.4em;
+            border-bottom: none;
+            margin-bottom: 18px;
+        }
+
+        footer.resources .intro-text {
+            color: #57534e;
+            margin-bottom: 20px;
+            font-size: 0.96em;
+        }
+
+        footer.resources ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        footer.resources li {
+            margin-bottom: 18px;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        footer.resources li:before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        footer.resources a {
+            color: #0891b2;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        footer.resources a:hover {
+            color: #0e7490;
+        }
+
+        footer.resources strong {
+            color: #1a1a1a;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        footer.resources .description {
+            font-size: 0.92em;
+            color: #57534e;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .glossary {
+                grid-template-columns: 1fr !important;
+                gap: 25px;
+            }
+
+            .profit-vs-cash .examples {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <main id="main-content">
+        <header>
+            <h1>Cash Flow Statement Glossary</h1>
+            <div class="subtitle">Understanding where money actually comes from and goes</div>
+        </header>
+
+        <section aria-label="Introduction">
+            <div class="intro">
+                <p>A <strong>cash flow statement</strong> tracks actual cash moving in and out of a business. It answers the question: where did our cash come from, where did it go, and how much do we have left?</p>
+                <p>This is different from the income statement (which shows profit) and the balance sheet (which shows what you own and owe at a moment in time). The cash flow statement shows <strong>actual money movement</strong>.</p>
+            </div>
+        </section>
+
+        <section aria-label="Profit versus cash concept">
+            <div class="profit-vs-cash">
+                <h3>The Core Concept: Profit Does Not Equal Cash</h3>
+
+                <p>A company can be <strong>profitable</strong> (making money on paper) but still <strong>run out of cash</strong> (and go bankrupt). This is the single most important thing to understand.</p>
+
+                <div class="examples">
+                    <div class="example-box">
+                        <div class="example-title">Lopez Landscaping: Profitable But No Cash</div>
+                        <div class="example-detail"><strong>January:</strong> Completes $50,000 landscaping job for a corporate office park</div>
+                        <div class="example-detail">&#8226; Contract says payment in 90 days (due April)</div>
+                        <div class="example-detail">&#8226; Income statement: $50K revenue, $30K expenses = <strong>$20K profit</strong></div>
+                        <div class="example-detail">&#8226; Cash flow: $0 received (customer hasn&#8217;t paid yet)</div>
+                        <div class="example-detail">&#8226; Must pay workers $30K <em>now</em> (in January)</div>
+                        <div class="example-detail" style="color: #dc2626; font-weight: 600; margin-top: 8px;">Result: Profitable on paper, but running out of cash to pay bills.</div>
+                    </div>
+
+                    <div class="example-box">
+                        <div class="example-title">CloudTask Software: Unprofitable But Has Cash</div>
+                        <div class="example-detail"><strong>This month:</strong> Spending $100K on developers but only earning $60K in subscription revenue</div>
+                        <div class="example-detail">&#8226; Income statement: Revenue $60K, expenses $100K = <strong>$40K loss</strong></div>
+                        <div class="example-detail">&#8226; But: Just collected $500K in annual subscriptions paid upfront by customers</div>
+                        <div class="example-detail">&#8226; Cash flow: $500K cash inflow from subscriptions</div>
+                        <div class="example-detail" style="color: #16a34a; font-weight: 600; margin-top: 8px;">Result: Losing money on paper, but has plenty of cash to operate.</div>
+                    </div>
+                </div>
+
+                <blockquote>
+                    <strong>Warren Buffett:</strong> &#8220;Cash is to a business as oxygen is to an individual: never thought about when it is present, the only thing in mind when it is absent.&#8221;
+                </blockquote>
+
+                <p style="margin-top: 18px;"><strong>The lesson:</strong> Profit (income statement) tells you if the business model works. Cash flow tells you if the business will survive tomorrow. You need both. Silicon Valley Bank was profitable in 2022 but ran out of cash in 2023.</p>
+            </div>
+        </section>
+
+        <section aria-label="LLM prompt for profit versus cash">
+            <div class="ai-prompt">
+                <div class="label">Try asking your LLM</div>
+                <div class="prompt-text">Give me another example of a business that could be profitable but run out of cash. Use a specific type of business (like a construction company or a retail store) and walk me through the numbers. Make it really clear why profit and cash are different things.</div>
+            </div>
+        </section>
+
+        <section aria-label="Three types of cash flow">
+            <div class="structure-section">
+                <h2>The Three Types of Cash Flow</h2>
+
+                <p class="section-intro">Every dollar that comes in or goes out fits into one of three categories. The cash flow statement organizes money by <em>why</em> it moved, not just that it moved.</p>
+
+                <div class="structure-diagram" role="img" aria-label="Cash flow structure: Operating Activities (cash from running the business) plus Investing Activities (cash from buying or selling long-term items) plus Financing Activities (cash from borrowing or paying back money) equals Net Change in Cash">
+                    <div class="structure-line" aria-hidden="true">
+                        <span class="activity">Operating Activities</span>
+                        <span class="note">(cash from running the business)</span>
+                    </div>
+                    <div class="structure-line" aria-hidden="true">
+                        <span class="operator">+</span>
+                        <span class="activity">Investing Activities</span>
+                        <span class="note">(cash from buying/selling long-term items)</span>
+                    </div>
+                    <div class="structure-line" aria-hidden="true">
+                        <span class="operator">+</span>
+                        <span class="activity">Financing Activities</span>
+                        <span class="note">(cash from borrowing or paying back money)</span>
+                    </div>
+                    <div class="structure-line" aria-hidden="true" style="border-top: 2px solid #cbd5e1; margin-top: 8px; padding-top: 8px;">
+                        <span class="operator">=</span>
+                        <span class="total">Net Change in Cash</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="Operating activities glossary">
+            <h2>Operating Activities: Running the Business</h2>
+
+            <p class="section-intro">Cash from doing what the company actually does: selling products, collecting payments, paying suppliers, paying employees. This should usually be positive for a healthy company.</p>
+
+            <div class="glossary">
+                <dl class="term">
+                    <dt>Operating Cash Flow</dt>
+                    <dd>Cash generated from the core business operations. If you run a restaurant, this is cash collected from customers minus cash paid to suppliers and staff. Positive means the business generates cash; negative means it burns cash.
+                        <div class="example">A coffee shop that collects $500K from customers, pays $200K to suppliers, and $150K to employees has operating cash flow of $150K</div>
+                    </dd>
+                </dl>
+
+                <dl class="term">
+                    <dt>Why Operating Cash Does Not Equal Net Income</dt>
+                    <dd>Net income (from the income statement) includes revenue you haven&#8217;t collected yet, and expenses that don&#8217;t require cash (like depreciation on equipment you bought years ago). Operating cash flow adjusts for these to show actual cash from operations.
+                        <div class="note">The cash flow statement starts with net income, then adds back non-cash expenses (like depreciation, which does not require an actual cash payment), and subtracts revenue you haven&#8217;t collected yet (like sales on credit where customers haven&#8217;t paid). This gives you actual cash from operations.</div>
+                    </dd>
+                </dl>
+            </div>
+
+            <div class="ai-prompt">
+                <div class="label">Try asking your LLM</div>
+                <div class="prompt-text">Explain depreciation and why it gets &#8220;added back&#8221; on the cash flow statement. Use a simple example like a food truck that buys equipment. I don&#8217;t understand why something called an &#8220;expense&#8221; doesn&#8217;t use cash. Keep it simple, I&#8217;m new to accounting.</div>
+            </div>
+        </section>
+
+        <section aria-label="Investing activities glossary">
+            <h2>Investing Activities: Buying and Selling Long-Term Items</h2>
+
+            <p class="section-intro">Cash spent on things the company will use for years (equipment, buildings, securities) or received from selling them. Usually negative for growing companies because they are investing in the future.</p>
+
+            <div class="glossary">
+                <dl class="term">
+                    <dt>Investing Cash Flow</dt>
+                    <dd>Cash used to buy equipment, buildings, or securities (bonds, stocks). Also cash received from selling these things. Usually negative because companies invest for growth.
+                        <div class="example">A bakery that spends $200K on new ovens and delivery trucks has investing cash flow of negative $200K</div>
+                    </dd>
+                </dl>
+
+                <dl class="term">
+                    <dt>Capital Expenditures (CapEx)</dt>
+                    <dd>Money spent buying long-term assets like equipment or buildings. This is the biggest part of investing activities for most companies. Sometimes called &#8220;capital spending.&#8221;
+                        <div class="example">A restaurant chain opening 10 new locations spending $500K each = $5M in capital expenditures</div>
+                    </dd>
+                </dl>
+
+                <dl class="term">
+                    <dt>When Positive Is a Warning</dt>
+                    <dd>Negative investing cash flow is normal (companies invest in growth). But if investing is <em>positive</em>, the company is selling more assets than it is buying, often a sign they need cash urgently.
+                        <div class="example">If a struggling retailer sells old buildings for $20M cash, that is positive investing cash flow. But it is not sustainable. You can only sell assets once, and you might need those buildings to operate.</div>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+
+        <section aria-label="Financing activities glossary">
+            <h2>Financing Activities: Borrowing and Paying Back Money</h2>
+
+            <p class="section-intro">Cash from people or institutions that fund the company: borrowing from banks, issuing stock to investors, or paying money back through debt repayment and dividends.</p>
+
+            <div class="glossary">
+                <dl class="term">
+                    <dt>Financing Cash Flow</dt>
+                    <dd>Cash from raising money (borrowing or selling stock) or paying it back (repaying loans, paying dividends to shareholders). Positive means getting money; negative means paying it back.
+                        <div class="example">A company takes out a $10M bank loan (positive $10M), then repays $3M of an old loan (negative $3M). Net financing cash flow is positive $7M.</div>
+                    </dd>
+                </dl>
+
+                <dl class="term">
+                    <dt>Debt Issuance vs. Repayment</dt>
+                    <dd><strong>Issuance</strong> (borrowing) brings cash in (positive). <strong>Repayment</strong> (paying back) sends cash out (negative). The net tells you if the company is taking on more debt or paying it down.
+                        <div class="example">If a business borrows $50K from a bank this year, financing shows positive $50K. When they pay back $5K next year, financing shows negative $5K.</div>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+
+        <section aria-label="How banks make money">
+            <h2>How Banks Make Money</h2>
+
+            <div class="bank-explainer">
+                <h3>The Banking Business Model</h3>
+
+                <p>When you deposit money in a bank, you are actually <strong>lending money to the bank</strong>. The bank owes you that money back (which is why deposits appear as liabilities on a bank&#8217;s balance sheet).</p>
+
+                <p>In exchange for borrowing your money, the bank pays you interest, but it is tiny, maybe 0.5% or even 0% for checking accounts.</p>
+
+                <p>The bank then takes your money and uses it to make more money:</p>
+
+                <div class="money-flow">
+                    <div><strong>You deposit:</strong> $10,000 in a checking account at 0% interest</div>
+                    <div><strong>You earn:</strong> $0 per year</div>
+                    <div style="margin-top: 10px;"><strong>Bank lends your $10,000:</strong> To someone buying a car at 6% interest</div>
+                    <div><strong>Bank earns:</strong> $600 per year</div>
+                    <div style="margin-top: 10px; color: #166534; font-weight: 600;"><strong>Bank&#8217;s profit:</strong> $600 &#8722; $0 = $600 per year from your deposit</div>
+                </div>
+
+                <p>The bank can do this because they know <strong>not everyone will withdraw at once</strong>. If 1,000 people each deposit $10,000 ($10 million total), maybe only $1&#8211;2 million gets withdrawn on any given day. The bank can safely lend out $8&#8211;9 million long-term while keeping $1&#8211;2 million in cash for daily withdrawals.</p>
+
+                <p><strong>Banks make money on the spread:</strong> They pay you 0&#8211;0.5% on deposits, lend at 4&#8211;8% on loans, and keep the difference. The bigger the spread and the more deposits they have, the more money they make.</p>
+
+                <div class="key-point">
+                    <strong>The critical assumption:</strong> As long as the bank can pay back anyone who wants to withdraw, they are safe to lend out most of the deposits. But if too many people try to withdraw at once (a &#8220;bank run&#8221;), the bank does not have enough cash on hand. They have lent it out or invested it. If they cannot convert those investments back to cash fast enough, the bank fails.
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="Bank cash flow statements">
+            <h2>Why Banks Look Different on the Cash Flow Statement</h2>
+
+            <div class="bank-explainer">
+                <h3>For Banks: Deposits Equal Financing Activities</h3>
+
+                <p>This is confusing at first, so let&#8217;s be clear about why deposits show up where they do:</p>
+
+                <div class="money-flow">
+                    <div><strong>Regular Company:</strong></div>
+                    <div>&#8226; Borrows $10M from a bank &#8594; Financing cash flow +$10M</div>
+                    <div>&#8226; Repays $3M of the loan &#8594; Financing cash flow &#8722;$3M</div>
+                    <div style="margin-top: 14px; border-top: 1px solid #cbd5e1; padding-top: 10px;"><strong>Bank:</strong></div>
+                    <div>&#8226; Receives $10M in customer deposits &#8594; Financing cash flow +$10M</div>
+                    <div>&#8226; Customers withdraw $3M &#8594; Financing cash flow &#8722;$3M</div>
+                </div>
+
+                <p><strong>Why deposits are &#8220;financing&#8221; for banks:</strong> Because deposits are money the bank borrows from customers. Regular companies borrow from banks. Banks borrow from depositors. Both show up in the financing section.</p>
+
+                <p><strong>What this means for reading bank cash flows:</strong> When you see <strong>negative financing cash flow</strong> for a bank, that means deposits are leaving. Money is flowing out. If this continues, the bank will run out of cash, just like any company would if its funding source dried up.</p>
+
+                <p>In the SVB case, you will see quarterly financing cash flow data. Watch for when deposits start leaving (financing turns negative). That is when you know the bank is in trouble.</p>
+            </div>
+
+            <div class="ai-prompt">
+                <div class="label">Try asking your LLM</div>
+                <div class="prompt-text">I&#8217;m reading a bank&#8217;s cash flow statement and I see the financing section shows negative $5 billion. Explain what this means. Where is that cash going? Why would this be dangerous for a bank? Keep it simple and concrete.</div>
+            </div>
+        </section>
+
+        <section aria-label="Essential terms glossary">
+            <h2>Essential Terms</h2>
+
+            <div class="glossary">
+                <dl class="term">
+                    <dt>Net Change in Cash</dt>
+                    <dd>The sum of all three activities. Shows whether the company ended with more or less cash than it started with. This is the bottom line of the cash flow statement.
+                        <div class="formula">Net Change = Operating + Investing + Financing</div>
+                        <div class="example">Operating $5M, Investing (&#8722;$3M), Financing (&#8722;$1M) = Net change $1M (cash went up)</div>
+                    </dd>
+                </dl>
+
+                <dl class="term">
+                    <dt>Cash at End of Period</dt>
+                    <dd>The cash flow statement starts with cash at the beginning of the period, adds the net change, and shows cash at the end. This final number should match &#8220;cash and cash equivalents&#8221; on the balance sheet.
+                        <div class="example">Started with $10M, net change was negative $2M, ended with $8M</div>
+                    </dd>
+                </dl>
+
+                <dl class="term">
+                    <dt>Free Cash Flow</dt>
+                    <dd>Cash from operations minus money spent on essential equipment and buildings (capital expenditures). Shows how much cash is truly &#8220;free&#8221; for other uses.
+                        <div class="formula">Free Cash Flow = Operating Cash Flow &#8722; CapEx</div>
+                        <div class="example">Company generates $10M from operations, spends $3M on equipment. Free cash flow is $7M.</div>
+                    </dd>
+                </dl>
+
+                <dl class="term">
+                    <dt>Quarterly Trends</dt>
+                    <dd>Cash flows change quarter by quarter. Looking at multiple quarters in sequence reveals trends that annual numbers hide. A company might have positive cash flow for the full year, but if it is deteriorating quarter by quarter, there is a crisis building.
+                        <div class="example">Annual: $2M positive (looks fine). Quarterly: Q1 +$8M, Q2 +$1M, Q3 &#8722;$3M, Q4 &#8722;$4M. By year-end the company is burning cash fast. The annual number hides this.</div>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+
+        <section aria-label="Advanced topic on duration mismatch and SVB failure">
+            <div class="advanced-section">
+                <div class="header">
+                    <div>
+                        <span class="tag">Optional Advanced Topic</span>
+                        <h3>Duration Mismatch and Why SVB Failed</h3>
+                    </div>
+                </div>
+
+                <p class="audience"><strong>Read this if:</strong> You are interested in understanding the deeper technical reason SVB collapsed, or you are considering finance/banking as a career path. <strong>Skip this if:</strong> You just want to understand basic cash flow concepts. Everything above is sufficient for the case.</p>
+
+                <p><strong>The setup:</strong> Banks make money by borrowing short-term (deposits you can withdraw anytime) and lending long-term (30-year mortgages, 10-year bonds). This is profitable but risky.</p>
+
+                <div class="concept-box">
+                    <div class="concept-title">First: What Are Bonds and Why Do Banks Buy Them?</div>
+                    <div class="concept-detail"><strong>A bond is an IOU.</strong> When you buy a $1,000 bond from the U.S. government paying 3% interest, the government promises to pay you $30/year for 10 years, then return your $1,000.</div>
+                    <div class="concept-detail" style="margin-top: 10px;"><strong>Why banks buy them:</strong> Bonds are safer than making loans to businesses (the U.S. government will not default). Banks park deposits in bonds to earn steady, safe interest. SVB had $91 billion in bonds.</div>
+                </div>
+
+                <div class="concept-box">
+                    <div class="concept-title">What &#8220;Held-to-Maturity&#8221; (HTM) Means</div>
+                    <div class="concept-detail">Bonds can be classified two ways for accounting:</div>
+                    <div class="concept-detail" style="margin-top: 8px;"><strong>Available-for-Sale (AFS):</strong> You can sell them anytime. If the value drops, you report the loss on your balance sheet (but not income statement yet).</div>
+                    <div class="concept-detail" style="margin-top: 8px;"><strong>Held-to-Maturity (HTM):</strong> You promise to hold them until they mature. You do not report value changes at all. They stay on your balance sheet at original cost.</div>
+                    <div class="concept-detail" style="margin-top: 10px; color: #dc2626; font-weight: 600;">The trap: HTM bonds cannot easily be sold. If you sell them, you have to reclassify your entire HTM portfolio and report all losses immediately.</div>
+                </div>
+
+                <p><strong>SVB&#8217;s mistake:</strong> In 2020&#8211;2021, when interest rates were near 0%, SVB bought $91 billion in bonds paying 1.5&#8211;2.5% interest. They classified 77% as HTM (&#8220;we will hold these until maturity, no need to report value changes&#8221;).</p>
+
+                <p>Then in 2022, the Federal Reserve raised interest rates from 0% to 4.5%.</p>
+
+                <div class="example">
+                    <strong>Why rising rates hurt bonds:</strong> Imagine you own a $1,000 bond paying 2% ($20/year). New bonds now pay 4% ($40/year). Your bond is worth much less, maybe only $600, because investors would rather buy new bonds paying 4% than your bond paying 2%. If you hold to maturity, you will get your $1,000 back eventually. But if you need to sell <em>now</em>, you lose $400.
+                </div>
+
+                <p>SVB&#8217;s $91B in bonds lost about $15 billion in value. Because they were HTM, this loss did not show up on the income statement (SVB still looked &#8220;profitable&#8221;). But if they sold the bonds, they would realize the $15B loss immediately.</p>
+
+                <p><strong>The duration mismatch crisis:</strong> In 2022, depositors started withdrawing money (you will see this in quarterly cash flow data). SVB needed cash to pay depositors. But their bonds were:</p>
+
+                <div class="concept-box">
+                    <div class="concept-detail">1. <strong>Locked up</strong> (HTM classification made them hard to sell)</div>
+                    <div class="concept-detail">2. <strong>Underwater</strong> ($15B loss if sold)</div>
+                    <div class="concept-detail">3. <strong>Long-term</strong> (5&#8211;10 years to maturity, cannot get cash back quickly)</div>
+                </div>
+
+                <p>Meanwhile, deposits could flee instantly. When $16B in deposits left in 2022 (and $42B more tried to leave in March 2023), SVB could not convert their long-term bonds to cash fast enough without taking catastrophic losses.</p>
+
+                <p><strong>This is duration mismatch:</strong> Funding long-term assets (bonds with 10-year maturities) with short-term liabilities (deposits that can leave today). When interest rates change and deposits flee simultaneously, banks with this mismatch are trapped.</p>
+
+                <p><strong>The lesson:</strong> Banks must either (a) match the duration of assets and liabilities, or (b) have enough capital to absorb losses from selling assets at bad times, or (c) keep enough liquid assets (cash, short-term securities) to handle deposit outflows. SVB did none of these. They optimized for short-term profit and died when conditions changed.</p>
+
+                <p>The cash flow statement told the story: deposits fleeing (negative financing), emergency asset sales (positive investing in Q4), cash bleeding out. By Q4 2022, the writing was on the wall. Most analysts did not see it until March 2023 when SVB collapsed in 48 hours.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="resources">
+        <h2>Want to Go Deeper?</h2>
+        <p class="intro-text">These resources provide more comprehensive coverage of cash flow statements. Use them if you want more detail or different explanations.</p>
+
+        <ul role="list">
+            <li>
+                <strong><a href="https://www.sec.gov/about/reports-publications/investorpubsbegfinstmtguide" target="_blank" rel="noopener">SEC Beginner&#8217;s Guide to Financial Statements<span class="sr-only"> (opens in new tab)</span></a></strong>
+                <div class="description">Official government guide. Clear explanation of all three statements including cash flow.</div>
+            </li>
+            <li>
+                <strong><a href="https://corporatefinanceinstitute.com/resources/accounting/statement-of-cash-flows/" target="_blank" rel="noopener">Corporate Finance Institute: Cash Flow Statement<span class="sr-only"> (opens in new tab)</span></a></strong>
+                <div class="description">Detailed breakdown with examples of operating, investing, and financing activities.</div>
+            </li>
+            <li>
+                <strong><a href="https://www.investopedia.com/investing/what-is-a-cash-flow-statement/" target="_blank" rel="noopener">Investopedia: What Is a Cash Flow Statement?<span class="sr-only"> (opens in new tab)</span></a></strong>
+                <div class="description">Beginner-friendly explanation with real company examples.</div>
+            </li>
+            <li>
+                <strong><a href="https://hbr.org/2013/04/a-refresher-on-cash-flow" target="_blank" rel="noopener">Harvard Business Review: A Refresher on Cash Flow<span class="sr-only"> (opens in new tab)</span></a></strong>
+                <div class="description">Short, clear explanation of why cash flow matters.</div>
+            </li>
+            <li>
+                <strong><a href="https://www.investopedia.com/ask/answers/033015/what-difference-between-cash-flow-and-revenue.asp" target="_blank" rel="noopener">Investopedia: Cash Flow vs. Revenue vs. Profit<span class="sr-only"> (opens in new tab)</span></a></strong>
+                <div class="description">Explains the differences between these concepts with examples.</div>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
